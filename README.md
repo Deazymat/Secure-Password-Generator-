@@ -14,3 +14,9 @@ To generate a strong password that is unique buy clicking a button and following
 The password is made when the user choses the criteria as it states.
 
 ---
+
+## Resources 
+
+https://owasp.org/www-community/password-special-characters,
+https://stackoverflow.com/questions/1497481/javascript-password-generator
+https://w3collective.com/random-password-generator-javascript/
