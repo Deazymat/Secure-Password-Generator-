@@ -91,58 +91,55 @@ function generatePassword() {
     "}",
     "|",
   ];
-}
-// Selected character is set based on the users input
-var selectArray = [];
-// The length of what the user wants to input
-var passwordLength = generatePasswordLength();
-// Makes sure confirm that at least one of the characters are selected
-var charTypeSelected = false;
-// Loop for the user until one character type is chosen
-while (charTypeSelected == false) {
-  // The users choice for the characters
-  var catChoice = getSelect("lowercase");
-  var monkeyChoice = getSelect("uppercase");
-  var squirrelChoice = getSelect("numeric");
-  var frogChoice = getSelect("special");
-  // The checking to make sure one type is selected
-  if (catChoice || monkeyChoice || squirrelChoice || frogChoice) {
-    charTypeSelected = true;
-  } else {
-    alert("You have to select at least one of the character types");
+
+  // Selected character is set based on the users input
+  var selectArray = [];
+  // The length of what the user wants to input
+  var passwordLength = generatePasswordLength();
+  // Makes sure confirm that at least one of the characters are selected
+  var charTypeSelected = false;
+  // Loop for the user until one character type is chosen
+  while (charTypeSelected == false) {
+    // The users choice for the characters
+    var catChoice = getSelect("lowercase");
+    var monkeyChoice = getSelect("uppercase");
+    var squirrelChoice = getSelect("numeric");
+    var frogChoice = getSelect("special");
+    // The checking to make sure one type is selected
+    if (catChoice || monkeyChoice || squirrelChoice || frogChoice) {
+      charTypeSelected = true;
+    } else {
+      alert("You have to select at least one of the character types");
+    }
+  }
+
+  // Adding the selected character type for what is selected
+
+  if (catChoice) {
+    selectArray = selectArray.concat(cat);
+  }
+  if (monkeyChoice) {
+    selectArray = selectArray.concat(monkey);
+  }
+  if (squirrelChoice) {
+    selectArray = selectArray.concat(squirrel);
+  }
+  if (frogChoice) {
+    selectArray = selectArray.concat(frog);
+  }
+  // The empty string to build the password.
+
+  var passwordString = "";
+
+  // The loop for the selected array to generate the password
+
+  for (var i = 0; i < passwordLength; i++) {
+    passwordString += selectArray[Math.floor(Math.random() * selectArray)];
+
+    // This will reset if the user does not input correct character type
+    return passwordString;
   }
 }
-
-// Adding the selected character type for what is selected 
-
-if (catChoice) {
-  selectArray = selectArray.concat(cat);
-}
-if (monkeyChoice) {
-  selectArray = selectArray.concat(monkey);
-}
-if (squirrelChoice) {
-  selectArray = selectArray.concat(squirrel);
-}
-if (frogChoice) {
-  selectArray = selectArray.concat(frog);
-
-}
-// The empty string to build the password. 
-
-var passwordString = "";
-
-// The loop for the selected array to generate the password 
-
-
-for (var i = 0; i < passwordLength; i++) {
-  passwordString += selectArray[Math.floor(Math.random() * selectArray)];
-  
-}
-
-
-
-
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
