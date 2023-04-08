@@ -59,56 +59,64 @@ function generatePassword() {
     "Z",
   ];
   // Array of numbers
-var squirrel = [
-  "0",
-  "1",
-  "2",
-  "3",
-  "4",
-  "5",
-  "6",
-  "7",
-  "8",
-  "9"];
-// Array of special characters
-var frog = [
-"!",
-"@",
-"#",
-"$",
-"^",
-"&",
-"*",
-"(",
-")",
-"-",
-"_",
-"+",
-"=",
-"/",
-"?",
-":",
-";",
-".",
-">",
-",",
-"<",
-"`",
-"~",
-"[",
-"]",
-"{",
-"}",
-"|",
-];
-
-
+  var squirrel = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+  // Array of special characters
+  var frog = [
+    "!",
+    "@",
+    "#",
+    "$",
+    "^",
+    "&",
+    "*",
+    "(",
+    ")",
+    "-",
+    "_",
+    "+",
+    "=",
+    "/",
+    "?",
+    ":",
+    ";",
+    ".",
+    ">",
+    ",",
+    "<",
+    "`",
+    "~",
+    "[",
+    "]",
+    "{",
+    "}",
+    "|",
+  ];
+}
+// Selected character is set based on the users input
+var selectArray = []
+// The length of what the user wants to input
+var passwordLength = generatePasswordLength();
+// Makes sure confirm that at least one of the characters are selected
+var charTypeSelected = false;
+// Loop for the user until one character type is chosen
+while (charTypeSelected == false) {
+  // The users choice for the characters
+var catChoice = getSelect("lowercase");
+var monkeyChoice = getSelect("uppercase");
+var squirrelChoice = getSelect("numeric");
+var frogChoice = getSelect("special");
+// The checking to make sure one type is selected 
+if (catChoice || monkeyChoice || squirrelChoice || frogChoice) {
+  charTypeSelected = true;
+}
+else {
+  alert("You have to select at least one of the character types");
 }
 
 
 
 
-
+}
 
 var generateBtn = document.querySelector("#generate");
 
@@ -118,7 +126,6 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
