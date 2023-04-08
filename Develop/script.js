@@ -140,6 +140,26 @@ function generatePassword() {
     return passwordString;
   }
 }
+// Function for the password length
+function generatePasswordLength() {
+  var personSelect = 0;
+  while (personSelect < 10 || personSelect > 120) {
+    personSelect = parseInt(prompt("You must enter between 10 and 120:"));
+    if (isNaN(personSelect)) {
+      personSelect = 0;
+    }
+  }
+  return personSelect;
+}
+
+
+
+
+
+
+
+
+
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
