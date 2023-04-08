@@ -133,11 +133,13 @@ function generatePassword() {
 
   // The loop for the selected array to generate the password
 
-  for (var i = 0; i < passwordLength; i++) {
-    passwordString += selectArray[Math.floor(Math.random() * selectArray)];
+for (var i = 0; i < passwordLength; i++) {
+  passwordString += selectArray[Math.floor(Math.random() * selectArray.length)];
 
+
+}
     // This will reset if the user does not input correct character type
-  }
+
   // Love spending time when you forget you had to move this outside the string.
   return passwordString;
 }
@@ -160,7 +162,7 @@ function getSelect(activeChoice) {
     replyPrompt = "";
   var replyPrompt = "Would you rather ".concat(activeChoice);
   replyPrompt = replyPrompt.concat("characters (yes/no)?");
-  while ((personSelect = "a")) {
+  while (personSelect === "a") {
     personSelect = prompt(replyPrompt);
     personSelect = personSelect.toLocaleLowerCase();
     if (personSelect == "yes") {
