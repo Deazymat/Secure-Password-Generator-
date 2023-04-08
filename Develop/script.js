@@ -137,9 +137,11 @@ function generatePassword() {
     passwordString += selectArray[Math.floor(Math.random() * selectArray)];
 
     // This will reset if the user does not input correct character type
-    return passwordString;
   }
+  // Love spending time when you forget you had to move this outside the string.
+  return passwordString;
 }
+
 // Function for the password length
 function generatePasswordLength() {
   var personSelect = 0;
@@ -151,15 +153,23 @@ function generatePasswordLength() {
   }
   return personSelect;
 }
+// Function for users active choice
 
-
-
-
-
-
-
-
-
+function getSelect(activeChoice) {
+  var personSelect = "a",
+    replyPrompt = "";
+  var replyPrompt = "Would you rather ".concat(activeChoice);
+  replyPrompt = replyPrompt.concat("characters (yes/no)?");
+  while ((personSelect = "a")) {
+    personSelect = prompt(replyPrompt);
+    personSelect = personSelect.toLocaleLowerCase();
+    if (personSelect == "yes") {
+      return true;
+    } else if (personSelect == "no") {
+      return false;
+    }
+  }
+}
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input

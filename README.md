@@ -84,17 +84,43 @@ This Challenge is graded based on the following criteria:
 
 * Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
 
-* Repository contains multiple descriptive commit messages.
 
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
 
-## Review
+# 💻🛠️Advanced CSS: Portfolio💻🛠️
 
-You are required to submit the following for review:
+Welcome to my portfolio! This will showcase my skills and experience as a web developer.
 
-* The URL of the deployed application.
+---
 
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
+## ⚡ Table of Contents ⚡
 
-- - -
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+- [Introduction 🚀](#introduction-🚀)
+- [Features ](#features)
+- [License 🔐](#license-🔐)
+- [Contact ☎️](#contact-☎️)
+
+---
+
+## Introduction 🚀
+
+I have experience in building responsive websites and web applications using HTML and CSS. This will showcase my skills and experience to potential employers or clients. 
+
+---
+
+## Features
+
+Portfolio is made to be mobile friendly with Responsive design.
+Have included examples of my work, including links to live websites and GitHub Repositories.
+
+---
+## License 🔐
+
+- [MIT License](LICENSE.md)
+
+---
+
+## Contact ☎️
+
+- [Deazymat](https://github.com/Deazymat/Project-1)
+
+---
